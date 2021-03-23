@@ -17,4 +17,4 @@ iOS Lifecycle 이해를 위해 여러 ViewController 간에 이동할 수 있는
 
 ## 3. 설치 방법
 1. 다운로드 후 압축을 푼다
-2. xcode 파일을 실행
+2. .xcworkspace 확장자 파일 실행
