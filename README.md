@@ -1,4 +1,4 @@
-# 프로젝트 이름
+# 해마 클론 앱(?)
 
 <a href="https://www.youtube.com/channel/UCY_tYmndcIn_PtSEp_dVh8Q">
   <img src="https://user-images.githubusercontent.com/17216693/112113700-7d960280-8bfa-11eb-979a-5d652cff9018.jpg" width="700">
