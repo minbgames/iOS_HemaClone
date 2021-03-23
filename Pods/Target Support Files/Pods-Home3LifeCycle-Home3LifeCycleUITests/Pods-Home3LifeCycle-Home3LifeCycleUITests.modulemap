@@ -1,0 +1,6 @@
+framework module Pods_Home3LifeCycle_Home3LifeCycleUITests {
+  umbrella header "Pods-Home3LifeCycle-Home3LifeCycleUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

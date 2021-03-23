@@ -1,0 +1,6 @@
+framework module Pods_Home3LifeCycle {
+  umbrella header "Pods-Home3LifeCycle-umbrella.h"
+
+  export *
+  module * { export * }
+}
