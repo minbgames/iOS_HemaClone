@@ -23,6 +23,12 @@
                                     <constraint firstAttribute="height" constant="500" id="ulL-GD-7Os"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안내 문구를 작성해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVx-eL-5LV">
+                                <rect key="frame" x="122" y="83" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jDe-Rk-7po"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -30,10 +36,13 @@
                             <constraint firstItem="jDe-Rk-7po" firstAttribute="trailing" secondItem="rLw-EG-7N6" secondAttribute="trailing" constant="30" id="76G-Pb-0rF"/>
                             <constraint firstItem="rLw-EG-7N6" firstAttribute="top" secondItem="jDe-Rk-7po" secondAttribute="top" constant="100" id="GbT-Wm-lhi"/>
                             <constraint firstItem="rLw-EG-7N6" firstAttribute="leading" secondItem="jDe-Rk-7po" secondAttribute="leading" constant="30" id="Q18-WD-AE4"/>
+                            <constraint firstItem="pVx-eL-5LV" firstAttribute="centerX" secondItem="jDe-Rk-7po" secondAttribute="centerX" id="e4g-d7-vcP"/>
+                            <constraint firstItem="pVx-eL-5LV" firstAttribute="top" secondItem="jDe-Rk-7po" secondAttribute="top" constant="39" id="xhL-pe-cyv"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="calendar" destination="rLw-EG-7N6" id="vWd-Ux-7AO"/>
+                        <outlet property="guideLabel" destination="pVx-eL-5LV" id="Z0M-7a-cwI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -105,6 +114,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안내 문구를 작성해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwr-Xy-9no">
+                                <rect key="frame" x="121.5" y="55" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5bp-pK-KiG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -123,9 +138,11 @@
                             <constraint firstItem="Gz3-jE-FS0" firstAttribute="top" secondItem="XW4-Ab-9cD" secondAttribute="bottom" constant="62" id="YVZ-5q-13P"/>
                             <constraint firstItem="5bp-pK-KiG" firstAttribute="bottom" secondItem="Z8T-PY-Qna" secondAttribute="bottom" constant="49" id="Z3j-JT-o7Y"/>
                             <constraint firstItem="hKb-gR-W9e" firstAttribute="top" secondItem="Vjl-lb-qwd" secondAttribute="bottom" constant="62" id="ZGO-NF-Baq"/>
+                            <constraint firstItem="dwr-Xy-9no" firstAttribute="centerX" secondItem="5bp-pK-KiG" secondAttribute="centerX" id="evn-gJ-p8d"/>
                             <constraint firstItem="Vjl-lb-qwd" firstAttribute="centerY" secondItem="XW4-Ab-9cD" secondAttribute="centerY" id="gYR-GO-wK9"/>
                             <constraint firstItem="Gz3-jE-FS0" firstAttribute="leading" secondItem="XW4-Ab-9cD" secondAttribute="leading" id="hgZ-p2-BNs"/>
                             <constraint firstItem="G6b-8V-8Pj" firstAttribute="leading" secondItem="5bp-pK-KiG" secondAttribute="leading" constant="29" id="i5p-gk-GtL"/>
+                            <constraint firstItem="dwr-Xy-9no" firstAttribute="top" secondItem="5bp-pK-KiG" secondAttribute="top" constant="11" id="ne9-MW-uqr"/>
                             <constraint firstItem="G6b-8V-8Pj" firstAttribute="top" secondItem="5bp-pK-KiG" secondAttribute="top" constant="6" id="slq-ZR-G7B"/>
                             <constraint firstItem="5bp-pK-KiG" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KKf-a4-Ooa" secondAttribute="trailing" constant="50" id="vNh-X1-RFE"/>
                             <constraint firstItem="Vjl-lb-qwd" firstAttribute="top" secondItem="KKf-a4-Ooa" secondAttribute="bottom" constant="55" id="xMF-5U-4hr"/>
@@ -136,6 +153,7 @@
                         <outlet property="backButton" destination="G6b-8V-8Pj" id="ZV7-Xs-zV0"/>
                         <outlet property="completeButton" destination="Z8T-PY-Qna" id="xvw-yK-AwV"/>
                         <outlet property="contentTextView" destination="hKb-gR-W9e" id="CNO-9t-La2"/>
+                        <outlet property="guideLabel" destination="dwr-Xy-9no" id="y6S-Fe-GoU"/>
                         <outlet property="resultLabel" destination="KKf-a4-Ooa" id="j0Z-bc-6zc"/>
                         <outlet property="titleTextField" destination="Vjl-lb-qwd" id="dIZ-Ph-pgR"/>
                     </connections>
@@ -177,14 +195,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안내 문구를 작성해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyZ-ev-mRk">
+                                <rect key="frame" x="122" y="55" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JNN-oC-NfI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sca-mz-S3X" firstAttribute="leading" secondItem="JNN-oC-NfI" secondAttribute="leading" constant="29" id="5cm-w2-syR"/>
                             <constraint firstItem="twb-yK-PUb" firstAttribute="top" secondItem="g9b-7M-lOz" secondAttribute="bottom" constant="50" id="AUS-LM-hri"/>
+                            <constraint firstItem="NyZ-ev-mRk" firstAttribute="centerX" secondItem="JNN-oC-NfI" secondAttribute="centerX" id="CEO-W8-pyV"/>
                             <constraint firstItem="JNN-oC-NfI" firstAttribute="trailing" secondItem="cFC-t2-WRO" secondAttribute="trailing" constant="91" id="IkC-eB-bhu"/>
                             <constraint firstItem="twb-yK-PUb" firstAttribute="leading" secondItem="g9b-7M-lOz" secondAttribute="leading" id="NKP-pn-kY3"/>
+                            <constraint firstItem="NyZ-ev-mRk" firstAttribute="top" secondItem="JNN-oC-NfI" secondAttribute="top" constant="11" id="Nf0-eG-YKP"/>
                             <constraint firstItem="sca-mz-S3X" firstAttribute="top" secondItem="JNN-oC-NfI" secondAttribute="top" constant="6" id="Qhp-Cj-FO1"/>
                             <constraint firstItem="g9b-7M-lOz" firstAttribute="top" secondItem="cFC-t2-WRO" secondAttribute="bottom" constant="50" id="SJs-Eb-mB4"/>
                             <constraint firstItem="cFC-t2-WRO" firstAttribute="top" secondItem="JNN-oC-NfI" secondAttribute="top" constant="171" id="Wf6-f8-mxx"/>
@@ -198,7 +224,7 @@
                         <outlet property="backButton" destination="sca-mz-S3X" id="A6S-db-lfC"/>
                         <outlet property="contentLabel" destination="twb-yK-PUb" id="Hmg-4O-hfj"/>
                         <outlet property="dateLabel" destination="cFC-t2-WRO" id="056-xz-3jQ"/>
-                        <outlet property="titleLabel" destination="g9b-7M-lOz" id="8ZG-JG-yNv"/>
+                        <outlet property="guideLabel" destination="NyZ-ev-mRk" id="kq8-EI-Mcx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yN-Lr-Xxs" sceneMemberID="firstResponder"/>

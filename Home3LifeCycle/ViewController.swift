@@ -8,14 +8,39 @@
 import FSCalendar
 import UIKit
 
+
 class ViewController: UIViewController, FSCalendarDelegate {
     
     @IBOutlet var calendar: FSCalendar!
-    
+    @IBOutlet weak var guideLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         calendar.delegate = self
+        view1StatusCheck = 0
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("first: viewDidAppear")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("first: viewDidDisappear")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("first: viewWillAppear")
+        
+        if(view1StatusCheck == 0){guideLabel.text = "처음 방문하셨군요"}
+        else if(view1StatusCheck == 1){guideLabel.text = "끝까지 작성해주세요"}
+        else if(view1StatusCheck == 2){guideLabel.text = "일기를 더 작성!"}
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("first: viewWillDisappear")
+        view2StatusCheck = 0
+    }
+    
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         let formatter = DateFormatter()
@@ -34,6 +59,5 @@ class ViewController: UIViewController, FSCalendarDelegate {
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
-
 }
 
