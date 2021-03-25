@@ -41,7 +41,6 @@ class ViewController: UIViewController, FSCalendarDelegate {
         view2StatusCheck = 0
     }
     
-    
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         let formatter = DateFormatter()
         // 한국 시간으로 표시

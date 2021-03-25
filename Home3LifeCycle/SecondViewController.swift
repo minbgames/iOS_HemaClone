@@ -62,11 +62,6 @@ class SecondViewController: UIViewController {
  
         view1StatusCheck = 1
     }
-
-    
-    // willappear과 willDisappear 기능에 맞게 설정을 할 수 있음
-    // SceneDelegate 기능도 검토
-    // 백그라운드로 갔을 때 화면이 흐려지게 되는 기능, 돌아왔을 때 복구
     
     @objc fileprivate func onBackBtnClicked(_ sender: UIButton){
         self.dismiss(animated: true)
